@@ -6,9 +6,9 @@ const { protect, admin } = require('../middleware/authMiddleware.js');
 
 router.post('/add', protect, admin, jobController.addJob);
 
-router.get('/jobs', protect, admin, jobController.getAllJobs);
+router.get('/jobs', jobController.getAllJobs);
 
-router.get('/jobs/:id', protect, admin, jobController.getJob);
+router.get('/jobs/:id', jobController.getJob);
 
 router.put('/jobs/:id', protect, admin, jobController.editJob);
 
