@@ -36,7 +36,7 @@ exports.getAllJobs = async (req, res) => {
     try {
         const jobs = await Job.find()
             .select(`-createdAt -updatedAt`);
-        res.status(200).json({ jobs });
+        res.status(200).json(jobs);
     } catch (error) {
         res.status(500).json({ error: 'Failed to retrieve jobs', details: error.message });
     }
