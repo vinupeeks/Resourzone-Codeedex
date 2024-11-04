@@ -25,7 +25,7 @@ exports.getJob = async (req, res) => {
         if (!job) {
             return res.status(404).json({ error: 'Job not found' });
         }
-        res.status(200).json({ job });
+        res.status(200).json( job );
     } catch (error) {
         res.status(500).json({ error: 'Failed to retrieve job', details: error.message });
     }
