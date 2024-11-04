@@ -5,7 +5,7 @@ exports.addJob = async (req, res) => {
     try {
 
         if (req.body.jobMode) {
-            req.body.jobMode = req.body.jobMode.toLowerCase();
+            req.body.jobMode = req.body.jobMode.toUpperCase();
         }
         const newJob = new Job(req.body);
         await newJob.save();
