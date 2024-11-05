@@ -10,7 +10,7 @@ router.get('/jobs', jobController.getAllJobs);
 
 router.get('/jobs/:id', jobController.getJob);
 
-router.put('/jobs/edit/:id', protect, admin, jobController.editJob);
+router.patch('/jobs/edit/:id', protect, admin, jobController.editJob);
 
 router.delete('/jobs/delete/:id', protect, admin, jobController.deleteJob);
 
