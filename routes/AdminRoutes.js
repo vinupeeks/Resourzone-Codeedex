@@ -4,7 +4,7 @@ const { createAdmin, getAllAdmins, getAdminById, editAdmin, deleteAdmin } = requ
 
 const router = express.Router();
 
-router.post('/add', protect, admin, createAdmin);
+router.post('/add',  createAdmin);
 
 router.get('/', protect, admin, getAllAdmins);
 
