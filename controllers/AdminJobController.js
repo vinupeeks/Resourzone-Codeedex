@@ -58,6 +58,7 @@ exports.editJob = async (req, res) => {
 // Delete a job
 exports.deleteJob = async (req, res) => {
     try {
+        
         const deletedJob = await Job.findByIdAndDelete(req.params.id)
             .select(`-createdAt -updatedAt`);;
         if (!deletedJob) {
